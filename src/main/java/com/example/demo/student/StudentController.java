@@ -16,9 +16,7 @@ public class StudentController {
 
     @Autowired
     public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-//        Instead of using the inefficient code below, use the line above (DI) and add @Autowired
-//        this.studentService = new StudentService();
+        this.studentService = studentService; // this.studentService = new StudentService();
     }
 
     @GetMapping

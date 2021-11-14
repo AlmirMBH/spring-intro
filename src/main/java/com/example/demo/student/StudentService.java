@@ -24,17 +24,4 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-//     Code below not needed when StudentRepository used
-//        @GetMapping
-//        public List<Student> getStudents(){
-//            return List.of(
-//                    new Student(
-//                            1L,
-//                            "Almir",
-//                            "almir@almir.ba",
-//                            LocalDate.of(1979, Month.DECEMBER, 4),
-//                            41
-//                    )
-//            );
-//        }
 }

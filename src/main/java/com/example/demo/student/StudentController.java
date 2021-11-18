@@ -1,10 +1,13 @@
 package com.example.demo.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//@Controller
 @RestController
 @RequestMapping(path = "api/v1/student")
 public class StudentController {
@@ -20,6 +23,13 @@ public class StudentController {
     public List<Student> getStudents(){
         return studentService.getStudents();
     }
+
+//    @GetMapping(value = "/students")
+//    public String getStudents(Model model){
+//        List<Student> student = studentService.getStudents();
+//        model.addAttribute("students", student);
+//        return "index";
+//    }
 
     @PostMapping
     public void registerNewStudent(@RequestBody Student student){ studentService.addNewStudent(student); }
